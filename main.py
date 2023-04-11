@@ -1,6 +1,7 @@
 import requests
 import chompjs
 import json
+import os
 
 if __name__ == "__main__":
     # Original File
@@ -54,3 +55,4 @@ if __name__ == "__main__":
             final_dict[item_id]["element"] = character_to_element_dict[key_name]
     with open("./Output/ReliquaryWeight.cs.ID.json", "w+") as write_file:
         json.dump(final_dict, write_file, indent=4)
+    os.remove("./Output/ReliquaryWeight.cs.json")
