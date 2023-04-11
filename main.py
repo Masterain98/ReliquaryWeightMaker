@@ -43,7 +43,7 @@ if __name__ == "__main__":
     new_file.close()
 
     # Read Entire New File
-    with open('./Output/ReliquaryWeightConfiguration.json', 'r', encoding="utf-8") as file:
+    with open('./Output/ReliquaryWeight.cs.json', 'r', encoding="utf-8") as file:
         ReliquaryWeight_content = file.read()
 
     miaomiao_dict = chompjs.parse_js_object(ReliquaryWeight_content)
@@ -53,6 +53,6 @@ if __name__ == "__main__":
             item_id = chs_dict[key_name]
             final_dict[item_id] = miaomiao_dict[key_name]
             final_dict[item_id]["element"] = character_to_element_dict[key_name]
-    with open("./Output/ReliquaryWeight.cs.ID.json", "w+") as write_file:
+    with open("./Output/ReliquaryWeightConfiguration.json", "w+") as write_file:
         json.dump(final_dict, write_file, indent=4)
     os.remove("./Output/ReliquaryWeight.cs.json")
