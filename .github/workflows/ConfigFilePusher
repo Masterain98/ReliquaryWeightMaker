@@ -1,0 +1,22 @@
+name: Push File
+
+on: [push,workflow_dispatch]
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
+      with:
+        source_file: '/Output/ReliquaryWeight.cs.ID.json'
+        destination_repo: 'DGP-Studio/Snap.Hutao'
+        destination_folder: '/src/Snap.Hutao/Snap.Hutao/'
+        user_email: ${{ secrets.EMAIL }}
+        user_name: ${{ secrets.USERNAME }}
+        commit_message: 'Automatic Config File Push'
