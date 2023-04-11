@@ -43,7 +43,7 @@ if __name__ == "__main__":
     new_file.close()
 
     # Read Entire New File
-    with open('./Output/ReliquaryWeight.cs.json', 'r', encoding="utf-8") as file:
+    with open('./Output/ReliquaryWeightConfiguration.json', 'r', encoding="utf-8") as file:
         ReliquaryWeight_content = file.read()
 
     miaomiao_dict = chompjs.parse_js_object(ReliquaryWeight_content)
