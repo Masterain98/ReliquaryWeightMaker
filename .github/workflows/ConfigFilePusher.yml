@@ -14,7 +14,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
       with:
-        source_file: '/Output/ReliquaryWeight.cs.ID.json'
+        source_file: '${{ github.workspace }}/Output/ReliquaryWeight.cs.ID.json'
         destination_repo: 'DGP-Studio/Snap.Hutao'
         destination_folder: '/src/Snap.Hutao/Snap.Hutao/'
         user_email: ${{ secrets.EMAIL }}
