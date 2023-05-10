@@ -54,5 +54,5 @@ if __name__ == "__main__":
             final_dict[item_id] = miaomiao_dict[key_name]
             final_dict[item_id]["element"] = character_to_element_dict[key_name]
     with open("./Output/ReliquaryWeightConfiguration.json", "w+") as write_file:
-        json.dump(final_dict, write_file, indent=4)
+        json.dump(final_dict, write_file, indent=2)
     os.remove("./Output/ReliquaryWeight.cs.json")
