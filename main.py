@@ -26,7 +26,7 @@ if __name__ == "__main__":
                                  for item in metadata_json]
     character_to_element_dict = {list(item.keys())[0]: list(item.values())[0] for item in character_to_element_list}
     # CHS to ID Dict
-    chs_dict = json.loads(requests.get("https://api.uigf.org/dict/chs.json").text)
+    chs_dict = json.loads(requests.get("https://api.uigf.org/dict/genshin/chs.json").text)
 
     # Read MiaoMiao
     original_file = open('artis-mark.js', 'r', encoding="utf-8")
