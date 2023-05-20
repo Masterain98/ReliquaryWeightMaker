@@ -2,6 +2,7 @@ import requests
 import chompjs
 import json
 import os
+import warnings
 
 if __name__ == "__main__":
     # Original File
@@ -50,7 +51,11 @@ if __name__ == "__main__":
     final_dict = {}
     for key_name in miaomiao_dict.keys():
         if key_name != "旅行者" and key_name != "空" and key_name != "荧":
-            item_id = chs_dict[key_name]
+            try:
+                item_id = chs_dict[key_name]
+            except KeyError:
+                warnings.warn("Cannot find key ID for %s" % key_name)
+                continue
             final_dict[item_id] = miaomiao_dict[key_name]
             final_dict[item_id]["element"] = character_to_element_dict[key_name]
     with open("./Output/ReliquaryWeightConfiguration.json", "w+") as write_file:
