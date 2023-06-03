@@ -39,5 +39,5 @@ def push():
             "elementType": element_text_to_id(v["element"]),
             "physicalAddHurt": v.get("phy", 0),
         })
-    result = requests.post(os.getenv("post_url"), json=new_json_list)
+    result = requests.post(os.getenv("POST_URL"), json=new_json_list)
     print("Pushed result: %s" % result.status_code)
