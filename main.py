@@ -3,6 +3,7 @@ import chompjs
 import json
 import os
 import warnings
+from push import push
 
 if __name__ == "__main__":
     # Original File
@@ -61,3 +62,4 @@ if __name__ == "__main__":
     with open("./Output/ReliquaryWeightConfiguration.json", "w+") as write_file:
         json.dump(final_dict, write_file, indent=2)
     os.remove("./Output/ReliquaryWeight.cs.json")
+    push()
