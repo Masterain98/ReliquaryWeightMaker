@@ -11,7 +11,7 @@ def element_text_to_id(element_name: str) -> int:
         "Dendro": 3,
         "Electro": 4,
         "Cryo": 5,
-        "Anemo": 6,
+        "Anemo": 7,
         "Geo": 8
     }
     try:
