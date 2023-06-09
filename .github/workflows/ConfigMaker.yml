@@ -32,6 +32,8 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Generate Config
+        env:
+            POST_URL: ${{ secrets.POST_URL }}
         run : |
           python ${{ github.workspace }}/main.py
 
