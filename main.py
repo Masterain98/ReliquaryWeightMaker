@@ -22,7 +22,7 @@ if __name__ == "__main__":
         "冰": "Cryo"
     }
     metadata_json = json.loads(
-        requests.get("https://raw.githubusercontent.com/DGP-Studio/Snap.Metadata/main/Output/CHS/Avatar"
+        requests.get("https://raw.githubusercontent.com/DGP-Studio/Snap.Metadata/main/Genshin/CHS/Avatar"
                      ".json").text)
     character_to_element_list = [{item["Name"]: element_chs_to_eng[item["FetterInfo"]["VisionBefore"]]}
                                  for item in metadata_json]
