@@ -829,5 +829,31 @@
     "recharge": 0,
     "heal": 0,
     "element": "Dendro"
+  },
+  "10000084": {
+    "hp": 0,
+    "atk": 75,
+    "def": 0,
+    "cpct": 100,
+    "cdmg": 100,
+    "mastery": 0,
+    "dmg": 100,
+    "phy": 0,
+    "recharge": 55,
+    "heal": 0,
+    "element": "Pyro"
+  },
+  "10000083": {
+    "hp": 0,
+    "atk": 75,
+    "def": 0,
+    "cpct": 100,
+    "cdmg": 100,
+    "mastery": 0,
+    "dmg": 100,
+    "phy": 0,
+    "recharge": 55,
+    "heal": 0,
+    "element": "Anemo"
   }
 }
