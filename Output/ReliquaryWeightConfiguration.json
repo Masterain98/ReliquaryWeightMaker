@@ -891,5 +891,18 @@
     "recharge": 75,
     "heal": 0,
     "element": "Hydro"
+  },
+  "10000086": {
+    "hp": 0,
+    "atk": 75,
+    "def": 0,
+    "cpct": 100,
+    "cdmg": 100,
+    "mastery": 75,
+    "dmg": 100,
+    "phy": 0,
+    "recharge": 55,
+    "heal": 0,
+    "element": "Cryo"
   }
 }
